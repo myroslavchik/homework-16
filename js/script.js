@@ -2,26 +2,26 @@
 
 // Напиши всі можливі варіанти створення функцій.
 
-function name(a, b) {
-    return a + b;
-}
+// function name(a, b) {
+//     return a + b;
+// }
 
-let name = function(a, b) {
-    console.log(a + b);
-}
+// let name = function(a, b) {
+//     console.log(a + b);
+// }
 
-let name = (a, b) => a + b;
+// let name = (a, b) => a + b;
 
 
 // Створи функцію, яка буде виводити кількість
 // переданих їй аргументів.
 
-function quantity() {
-    for(i = 0; i < arguments.length; i++) {}
-    return arguments.length;
-}
+// function quantity() {
+//     for(i = 0; i < arguments.length; i++) {}
+//     return arguments.length;
+// }
 
-console.log(quantity(1, 2, 3, 4, 8, 9));
+// console.log(quantity(1, 2, 3, 4, 8, 9));
 
 
 
@@ -30,34 +30,34 @@ console.log(quantity(1, 2, 3, 4, 8, 9));
 // 1 - якщо перше число більше, ніж друге; 
 // 0 - якщо числа рівні.
 
-function returnNum (a, b) {
-    if (a < b) {
-        return -1;
-    } else if (a > b) {
-        return 1;
-    } else if (a === b) {
-        return 0;
-    }
-}
+// function returnNum (a, b) {
+//     if (a < b) {
+//         return -1;
+//     } else if (a > b) {
+//         return 1;
+//     } else if (a === b) {
+//         return 0;
+//     }
+// }
 
-console.log(returnNum(3, 3));
+// console.log(returnNum(3, 3));
 
 
 // Напиши функцію, яка обчислює факторіал
 //  переданого їй числа.
 
 
-function factorial (number) {
-    if (number < 0) {
-        return -1;
-    } else if (number == 0) {
-        return 1;
-    } else {
-        return (number * factorial(number - 1));
-    }
-}
+// function factorial (number) {
+//     if (number < 0) {
+//         return -1;
+//     } else if (number == 0) {
+//         return 1;
+//     } else {
+//         return (number * factorial(number - 1));
+//     }
+// }
 
-console.log(factorial(5));
+// console.log(factorial(5));
 
 
 // Напиши функцію, яка приймає три окремі цифри
@@ -65,11 +65,11 @@ console.log(factorial(5));
 //  цифри 1, 4, 9 перетворяться в число 149.
 
 
-function transNumber (a, b, c) {
-    let sum = `${a}${b}${c}`;
-    return Number(sum);
-}
-console.log(transNumber(8, 5, 4));
+// function transNumber (a, b, c) {
+//     let sum = `${a}${b}${c}`;
+//     return Number(sum);
+// }
+// console.log(transNumber(8, 5, 4));
 
 
 
@@ -83,16 +83,17 @@ function areaRect (length, width) {
         return "Невірні дані"
     } else if (length && width) {
         area = length * width;
-        return area;
+        return `Площа прямокутника: ${area}`;
     } else if (length || width) {
-        square = length * 2 || width * 2;
-        return square;
+        square = Math.pow(length, 2)  || Math.pow(width, 2);
+        return `Площа квадрата: ${square}`;
     } else {
         return "Немає данних";
     }
 }
 
-console.log(areaRect(7, 7));
+console.log(areaRect(3, 4));
+console.log(areaRect(3));
 
 
 
@@ -103,24 +104,24 @@ console.log(areaRect(7, 7));
 // число “досконалим числом”. Досконале число - це число,
 // яке дорівнює сумі всіх своїх дільників.
 
-function perfectNum(number) {
-    sum = 0;
-    for (i = 1; i <= number / 2; i++) 
-    { 
-        if (number % i === 0) 
-        {
-            sum += i;   
-        }
+// function perfectNum(number) {
+//     sum = 0;
+//     for (i = 1; i <= number / 2; i++) 
+//     { 
+//         if (number % i === 0) 
+//         {
+//             sum += i;   
+//         }
         
-    }
-    if (sum === number && sum !== 0)
-    {
-        console.log(`Це досконале число.`);
-    } 
-    else console.log(`Це не досконале число.`);
-}
+//     }
+//     if (sum === number && sum !== 0)
+//     {
+//         console.log(`Це досконале число.`);
+//     } 
+//     else console.log(`Це не досконале число.`);
+// }
 
-perfectNum(6);
+// perfectNum(6);
 
 
 
@@ -133,32 +134,32 @@ perfectNum(6);
 // досконалим.
 
 
-function numbersPerf(a, b) {
+// function numbersPerf(a, b) {
 
-        sum = 0;
+//         sum = 0;
     
-        for(i = a; i <= b; i++)
-        {
-            for(j = 1; j <= i / 2; j++)
-            {
-                if ((i % j === 0))
-                {
-                    sum += j;
-                }
-            }
-            if (i == sum)
-            {
-                console.log(i);
-            }
+//         for(i = a; i <= b; i++)
+//         {
+//             for(j = 1; j <= i / 2; j++)
+//             {
+//                 if ((i % j === 0))
+//                 {
+//                     sum += j;
+//                 }
+//             }
+//             if (i == sum)
+//             {
+//                 console.log(i);
+//             }
             
-            sum = 0;
-        }
+//             sum = 0;
+//         }
     
-        return 0;
-    }
+//         return 0;
+//     }
     
     
-    numbersPerf(1, 25000);
+//     numbersPerf(1, 25000);
 
 
 
